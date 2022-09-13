@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Game
-  # Количество ошибок
+  
   TOTAL_ERRORS_ALLOWED = 7
 
   def initialize(word)
