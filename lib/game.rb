@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Game
-  
   TOTAL_ERRORS_ALLOWED = 7
 
   def initialize(word)
@@ -27,18 +26,6 @@ class Game
     end
   end
 
-  def normalize_letter(letter)
-    case letter
-    when 'Ё' then 'Е'
-    when 'Й' then 'И'
-    else letter
-    end
-  end
-
-  def normalize_letters
-    @letters.map { |letter| normalize_letter(letter) }
-  end
-
   def lost?
     errors_allowed.zero?
   end
@@ -58,5 +45,19 @@ class Game
 
   def word
     @letters.join
+  end
+
+  private
+
+  def normalize_letter(letter)
+    case letter
+    when 'Ё' then 'Е'
+    when 'Й' then 'И'
+    else letter
+    end
+  end
+
+  def normalize_letters
+    @letters.map { |letter| normalize_letter(letter) }
   end
 end

@@ -1,4 +1,4 @@
-# 'Hangman'
+# Hangman
 
 Hangman is a console game in the Ruby language
 ## The principle of the game
@@ -30,13 +30,3 @@ Enjoy!
 words are stored in a file data/words.txt
 
 just add new words to the file. Each word must be on a new line and written in UPPER CASE
-
-### how to change the number of possible errors?
-
-in file lib/game.rb 
-
-change the value of the constant. Default value = 7
-
-```
-  TOTAL_ERRORS_ALLOWED = 7
-```
